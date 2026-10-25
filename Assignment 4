@@ -1,0 +1,27 @@
+//program that finds the final amount a customer has to pay
+#include <stdio.h>
+int main() 
+{
+    int membership;
+    float amount, discount=0, delivery=0;
+    printf("Enter the amount in rupees" );
+    scanf("%f",&amount);
+    printf(" enter the membership");
+    scanf("%d",&membership);
+    if (amount >= 500)
+    {
+        if (membership == 1){
+            discount = amount * 0.10;
+        }    
+        else
+        {
+            discount=0.0;
+        }    
+    }
+    else
+    {
+        delivery=50;
+    }
+    printf("final amount %.2f",amount - discount + delivery);
+}    
+
